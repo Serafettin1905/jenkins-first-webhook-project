@@ -1,10 +1,12 @@
 pipeline {
     agent any
-    environment {
-        name = "test"
-        url = "http://localhost:8080"
-    }
     stages {
+        stage('build') {
+            steps {
+                echo 'Clarusway_Way to Reinvent Yourself'
+                sh 'echo Integrating Jenkins Pipeline with GitHub Webhook using Jenkinsfile'
+            }
+
         stage('Build-1') {
             steps {
                 sh 'echo "hello world"'
@@ -73,5 +75,9 @@ pipeline {
             echo "post ${name}"
             '''
         }
-    }
+
+
+            
+        }
+    }
 }
